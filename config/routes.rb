@@ -1,8 +1,19 @@
 Rails.application.routes.draw do
 
   resources :articles
+  resources :users
+  resources :microposts
+  
+  get '/signup', to: 'users#new'
+  match '/signin', to: 'sessions#new', via: :all
+  get '/signout', to: 'sessions#destroy'
+  
+  get '/chat', to: 'static_pages#chat'
+  get '/help', to: 'static_pages#help'
+  get '/about', to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
 
-  root 'articles#index'
+  root 'static_pages#home'
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,17 @@
+<% if signed_in? %>
+	<div class="row">
+		<aside class="left">
+			<section>
+				<%= render 'shared/user_info' %>
+			</section>
+			<section class="span4">
+				<%= render 'shared/micropost_form' %>
+			</section>
+		</aside>
+		<div class="span6 right">
+			<h2 class="center">Micropost Feed</h2>
+			<%= render 'shared/feed' %> 
+		</div>
+	</div>
+<% else %>
+<% end %>

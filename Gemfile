@@ -16,6 +16,7 @@ gem 'puma'
 gem 'bcrypt', '~> 3.1.7'
 gem 'rmagick'
 gem 'carrierwave'
+gem 'will_paginate'
 
 group :doc do
   gem 'sdoc', '~> 0.4.0'
